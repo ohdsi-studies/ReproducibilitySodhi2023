@@ -1,0 +1,836 @@
+targetId,comparatorId,outcomeId,outcomeName,type
+3089,3088,257011,Acute upper respiratory infection,outcome
+3089,3088,438624,Complication of renal dialysis,outcome
+3089,3088,4210746,Localized amyloidosis,outcome
+3089,3088,436828,Saliva abnormal,outcome
+3089,3088,4223399,Iliac crest spur,outcome
+3089,3088,4155818,Does climb,outcome
+3089,3088,4305376,Porphyria,outcome
+3089,3088,134315,Myelophthisis,outcome
+3089,3088,135852,Teething syndrome,outcome
+3089,3088,134117,Subcorneal pustular dermatosis,outcome
+3089,3088,4111720,Sequelae of subarachnoid hemorrhage,outcome
+3089,3088,435028,Puerperal pyrexia of unknown origin,outcome
+3089,3088,198846,Enthesopathy of hip region,outcome
+3089,3088,438759,Descemet's membrane fold,outcome
+3089,3088,4229403,Flat anterior chamber of eye,outcome
+3089,3088,136538,Closed fracture larynx and/or trachea,outcome
+3089,3088,436426,Malleus mobility reduced,outcome
+3089,3088,380724,Corneal ghost vessels,outcome
+3089,3088,4173136,Agnosia,outcome
+3089,3088,4019971,Discord in school,outcome
+3089,3088,4228429,Carnitine deficiency,outcome
+3089,3088,4260364,Choledochal cyst,outcome
+3089,3088,436041,Leech infestation,outcome
+3089,3088,4287416,Hyperphenylalaninemia,outcome
+3089,3088,4216219,Bizarre personal appearance,outcome
+3089,3088,435574,Abnormal form of root of tooth,outcome
+3089,3088,4022078,Discord with counselor,outcome
+3089,3088,4213540,Cervical somatic dysfunction,outcome
+3089,3088,439082,Menopausal syndrome,outcome
+3089,3088,436230,Blood chemistry abnormal,outcome
+3089,3088,374375,Impacted cerumen,outcome
+3089,3088,201061,Diaphragmatic hernia,outcome
+3089,3088,80502,Osteoporosis,outcome
+3089,3088,196168,Irregular periods,outcome
+3089,3088,436070,Vitamin D deficiency,outcome
+3089,3088,377910,Deviated nasal septum,outcome
+3089,3088,443530,Hematochezia,outcome
+3089,3088,314754,Wheezing,outcome
+3089,3088,201613,Chronic nonalcoholic liver disease,outcome
+3089,3088,4110815,"Sensorineural hearing loss, bilateral",outcome
+3089,3088,437390,Hypoxemia,outcome
+3089,3088,440129,Hypertrophy of nasal turbinates,outcome
+3089,3088,138384,Acquired hypothyroidism,outcome
+3089,3088,439405,Walking disability,outcome
+3089,3088,435515,Hypo-osmolality and or hyponatremia,outcome
+3089,3088,437833,Hypokalemia,outcome
+3089,3088,261880,Atelectasis,outcome
+3089,3088,195873,Leukorrhea,outcome
+3089,3088,45768910,Uncomplicated asthma,outcome
+3089,3088,201916,Ureteric stone,outcome
+3089,3088,4009585,Abnormal urine,outcome
+3089,3088,4164898,Diverticulosis of large intestine without diverticulitis,outcome
+3089,3088,192450,Retention of urine,outcome
+3089,3088,81175,Contusion of chest,outcome
+3089,3088,136237,Cardiovascular system problem,outcome
+3089,3088,257683,Posterior rhinorrhea,outcome
+3089,3088,72737,Microcalcifications of the breast,outcome
+3089,3088,437038,Blood in urine,outcome
+3089,3088,436246,Reduced libido,outcome
+3089,3088,441417,Incoordination,outcome
+3089,3088,4236484,Paresthesia,outcome
+3089,3088,4002818,Spasm of back muscles,outcome
+3089,3088,200528,Ascites,outcome
+3089,3088,4152351,"Abdominal distension, gaseous",outcome
+3089,3088,76153,Low compliance bladder,outcome
+3089,3088,4248728,Snoring,outcome
+3089,3088,438791,Pulmonary congestion and hypostasis,outcome
+3089,3088,4311591,Cramp in limb,outcome
+3089,3088,73564,Full thickness rotator cuff tear,outcome
+3089,3088,77079,Spinal stenosis,outcome
+3089,3088,4344500,Impingement syndrome of shoulder region,outcome
+3089,3088,433527,Endometriosis (clinical),outcome
+3089,3088,432798,"Mechanical complication of internal orthopedic device, implant AND/OR graft",outcome
+3089,3088,4170770,Epidermoid cyst,outcome
+3089,3088,78162,Peripheral vertigo,outcome
+3089,3088,81380,Cervical syndrome,outcome
+3089,3088,4103703,Melena,outcome
+3089,3088,72404,Joint stiffness,outcome
+3089,3088,438130,Opioid abuse,outcome
+3089,3088,197675,Incontinence of feces,outcome
+3089,3088,40480893,Nonspecific tuberculin test reaction,outcome
+3089,3088,73026,Abnormal breath sounds,outcome
+3089,3088,439790,Psychalgia,outcome
+3089,3088,435508,Adrenal cortical hypofunction,outcome
+3089,3088,434004,Hypervolemia,outcome
+3089,3088,4012570,High risk sexual behavior,outcome
+3089,3088,133729,Hyperparathyroidism,outcome
+3089,3088,195926,Slowing of urinary stream,outcome
+3089,3088,372324,Eustachian tube disorder,outcome
+3089,3088,4295287,Hypercoagulability state,outcome
+3089,3088,256449,Bronchiectasis,outcome
+3089,3088,4022076,Patient dependence on care provider,outcome
+3089,3088,4092743,Unsteady when standing,outcome
+3089,3088,4115402,Difficulty sleeping,outcome
+3089,3088,138466,Leukoplakia of oral mucosa,outcome
+3089,3088,140173,Telogen effluvium,outcome
+3089,3088,435723,Wound seroma,outcome
+3089,3088,253796,Pneumothorax,outcome
+3089,3088,4098604,Hypomagnesemia,outcome
+3089,3088,4059015,Falls,outcome
+3089,3088,200485,Pressure ulcer of buttock,outcome
+3089,3088,4083487,Macular drusen,outcome
+3089,3088,4058388,Hypertrophic scar,outcome
+3089,3088,434916,"Amphetamine or psychostimulant dependence, continuous",outcome
+3089,3088,80463,Fetus with chromosomal abnormality with antenatal problem,outcome
+3089,3088,4166231,Genetic predisposition,outcome
+3089,3088,134765,Cachexia,outcome
+3089,3088,44783954,Acid reflux,outcome
+3089,3088,195212,Hypercortisolism,outcome
+3089,3088,4125590,Slurred speech,outcome
+3089,3088,4201390,Colostomy present,outcome
+3089,3088,434887,Disorders of bilirubin excretion,outcome
+3089,3088,434002,Mineral deficiency,outcome
+3089,3088,377283,Conjunctival hyperemia,outcome
+3089,3088,4218873,Glossopyrosis,outcome
+3089,3088,40481632,Ganglion cyst,outcome
+3089,3088,432596,Immune defect,outcome
+3089,3088,4199550,Unable to mobilize,outcome
+3089,3088,435849,Parietoalveolar pneumopathy,outcome
+3089,3088,196454,Colostomy and enterostomy malfunction,outcome
+3089,3088,141667,Laxity of ligament,outcome
+3089,3088,4305303,Sleep deprivation,outcome
+3089,3088,4168681,Irritability and anger,outcome
+3089,3088,4229897,Stupor,outcome
+3089,3088,434872,Infection by Trichomonas,outcome
+3089,3088,4090353,Incompetent urethral closure mechanism,outcome
+3089,3088,441266,Thiamine deficiency,outcome
+3089,3088,439035,Otosclerosis,outcome
+3089,3088,440068,Psychosexual dysfunction,outcome
+3089,3088,4216894,Precipitous drop in hematocrit,outcome
+3089,3088,137443,Mechanical complication due to skin graft failure AND/OR rejection,outcome
+3089,3088,435088,Senility,outcome
+3089,3088,4262562,Abnormal heart beat,outcome
+3089,3088,436088,Nondependent opioid abuse in remission,outcome
+3089,3088,4182164,Temporomandibular joint crepitus,outcome
+3089,3088,378765,Tympanosclerosis,outcome
+3089,3088,438391,Amino acid transport disorder,outcome
+3089,3088,133088,Late amputation stump complication,outcome
+3089,3088,193240,Acute generalized peritonitis,outcome
+3089,3088,4051630,Malingering,outcome
+3089,3088,437092,Physiological development failure,outcome
+3089,3088,437448,Exhaustion due to excessive exertion,outcome
+3089,3088,443172,"Splinter of face, without major open wound",outcome
+3089,3088,436409,Abnormal pupil,outcome
+3089,3088,443447,Iatrogenic hypotension,outcome
+3089,3088,440193,Wristdrop,outcome
+3089,3088,372329,Dissociated deviation,outcome
+3089,3088,141456,Chilblains,outcome
+3089,3088,4022071,Convalescence,outcome
+3089,3088,4118057,Fetal or neonatal effect of maternal oligohydramnios,outcome
+3089,3088,4061157,Antenatal ultrasound scan abnormal,outcome
+3089,3088,440053,Infestation by insect,outcome
+3089,3088,437078,Large head,outcome
+3089,3088,434485,Increase in body fat,outcome
+3089,3088,134746,Finger clubbing,outcome
+3089,3088,435720,Adverse anesthesia outcome,outcome
+3089,3088,439788,Galactosemia,outcome
+3089,3088,40481585,Hypoplasia of maxillary bone,outcome
+3089,3088,433441,Ectopic production of endocrine substance,outcome
+3089,3088,134386,Gingival recession,outcome
+3089,3088,433244,Tooth loss,outcome
+3089,3088,432672,Fissure of nipple,outcome
+3089,3088,27826,Combination of endocrine dysfunction,outcome
+3089,3088,443702,Abnormal response to nerve stimulation,outcome
+3089,3088,443082,Starvation,outcome
+3089,3088,436233,Delayed milestone,outcome
+3089,3088,4276354,Bromhidrosis,outcome
+3112,3113,257011,Acute upper respiratory infection,outcome
+3112,3113,438624,Complication of renal dialysis,outcome
+3112,3113,4210746,Localized amyloidosis,outcome
+3112,3113,436828,Saliva abnormal,outcome
+3112,3113,4223399,Iliac crest spur,outcome
+3112,3113,4155818,Does climb,outcome
+3112,3113,4305376,Porphyria,outcome
+3112,3113,134315,Myelophthisis,outcome
+3112,3113,135852,Teething syndrome,outcome
+3112,3113,134117,Subcorneal pustular dermatosis,outcome
+3112,3113,4111720,Sequelae of subarachnoid hemorrhage,outcome
+3112,3113,435028,Puerperal pyrexia of unknown origin,outcome
+3112,3113,198846,Enthesopathy of hip region,outcome
+3112,3113,438759,Descemet's membrane fold,outcome
+3112,3113,4229403,Flat anterior chamber of eye,outcome
+3112,3113,136538,Closed fracture larynx and/or trachea,outcome
+3112,3113,436426,Malleus mobility reduced,outcome
+3112,3113,380724,Corneal ghost vessels,outcome
+3112,3113,4173136,Agnosia,outcome
+3112,3113,4019971,Discord in school,outcome
+3112,3113,4228429,Carnitine deficiency,outcome
+3112,3113,4260364,Choledochal cyst,outcome
+3112,3113,436041,Leech infestation,outcome
+3112,3113,4287416,Hyperphenylalaninemia,outcome
+3112,3113,4216219,Bizarre personal appearance,outcome
+3112,3113,435574,Abnormal form of root of tooth,outcome
+3112,3113,4022078,Discord with counselor,outcome
+3112,3113,4213540,Cervical somatic dysfunction,outcome
+3112,3113,439082,Menopausal syndrome,outcome
+3112,3113,436230,Blood chemistry abnormal,outcome
+3112,3113,374375,Impacted cerumen,outcome
+3112,3113,201061,Diaphragmatic hernia,outcome
+3112,3113,80502,Osteoporosis,outcome
+3112,3113,196168,Irregular periods,outcome
+3112,3113,436070,Vitamin D deficiency,outcome
+3112,3113,377910,Deviated nasal septum,outcome
+3112,3113,443530,Hematochezia,outcome
+3112,3113,314754,Wheezing,outcome
+3112,3113,201613,Chronic nonalcoholic liver disease,outcome
+3112,3113,4110815,"Sensorineural hearing loss, bilateral",outcome
+3112,3113,437390,Hypoxemia,outcome
+3112,3113,440129,Hypertrophy of nasal turbinates,outcome
+3112,3113,138384,Acquired hypothyroidism,outcome
+3112,3113,439405,Walking disability,outcome
+3112,3113,435515,Hypo-osmolality and or hyponatremia,outcome
+3112,3113,437833,Hypokalemia,outcome
+3112,3113,261880,Atelectasis,outcome
+3112,3113,195873,Leukorrhea,outcome
+3112,3113,45768910,Uncomplicated asthma,outcome
+3112,3113,201916,Ureteric stone,outcome
+3112,3113,4009585,Abnormal urine,outcome
+3112,3113,4164898,Diverticulosis of large intestine without diverticulitis,outcome
+3112,3113,192450,Retention of urine,outcome
+3112,3113,81175,Contusion of chest,outcome
+3112,3113,136237,Cardiovascular system problem,outcome
+3112,3113,257683,Posterior rhinorrhea,outcome
+3112,3113,72737,Microcalcifications of the breast,outcome
+3112,3113,437038,Blood in urine,outcome
+3112,3113,436246,Reduced libido,outcome
+3112,3113,441417,Incoordination,outcome
+3112,3113,4236484,Paresthesia,outcome
+3112,3113,4002818,Spasm of back muscles,outcome
+3112,3113,200528,Ascites,outcome
+3112,3113,4152351,"Abdominal distension, gaseous",outcome
+3112,3113,76153,Low compliance bladder,outcome
+3112,3113,4248728,Snoring,outcome
+3112,3113,438791,Pulmonary congestion and hypostasis,outcome
+3112,3113,4311591,Cramp in limb,outcome
+3112,3113,73564,Full thickness rotator cuff tear,outcome
+3112,3113,77079,Spinal stenosis,outcome
+3112,3113,4344500,Impingement syndrome of shoulder region,outcome
+3112,3113,433527,Endometriosis (clinical),outcome
+3112,3113,432798,"Mechanical complication of internal orthopedic device, implant AND/OR graft",outcome
+3112,3113,4170770,Epidermoid cyst,outcome
+3112,3113,78162,Peripheral vertigo,outcome
+3112,3113,81380,Cervical syndrome,outcome
+3112,3113,4103703,Melena,outcome
+3112,3113,72404,Joint stiffness,outcome
+3112,3113,438130,Opioid abuse,outcome
+3112,3113,197675,Incontinence of feces,outcome
+3112,3113,40480893,Nonspecific tuberculin test reaction,outcome
+3112,3113,73026,Abnormal breath sounds,outcome
+3112,3113,439790,Psychalgia,outcome
+3112,3113,435508,Adrenal cortical hypofunction,outcome
+3112,3113,434004,Hypervolemia,outcome
+3112,3113,4012570,High risk sexual behavior,outcome
+3112,3113,133729,Hyperparathyroidism,outcome
+3112,3113,195926,Slowing of urinary stream,outcome
+3112,3113,372324,Eustachian tube disorder,outcome
+3112,3113,4295287,Hypercoagulability state,outcome
+3112,3113,256449,Bronchiectasis,outcome
+3112,3113,4022076,Patient dependence on care provider,outcome
+3112,3113,4092743,Unsteady when standing,outcome
+3112,3113,4115402,Difficulty sleeping,outcome
+3112,3113,138466,Leukoplakia of oral mucosa,outcome
+3112,3113,140173,Telogen effluvium,outcome
+3112,3113,435723,Wound seroma,outcome
+3112,3113,253796,Pneumothorax,outcome
+3112,3113,4098604,Hypomagnesemia,outcome
+3112,3113,4059015,Falls,outcome
+3112,3113,200485,Pressure ulcer of buttock,outcome
+3112,3113,4083487,Macular drusen,outcome
+3112,3113,4058388,Hypertrophic scar,outcome
+3112,3113,434916,"Amphetamine or psychostimulant dependence, continuous",outcome
+3112,3113,80463,Fetus with chromosomal abnormality with antenatal problem,outcome
+3112,3113,4166231,Genetic predisposition,outcome
+3112,3113,134765,Cachexia,outcome
+3112,3113,44783954,Acid reflux,outcome
+3112,3113,195212,Hypercortisolism,outcome
+3112,3113,4125590,Slurred speech,outcome
+3112,3113,4201390,Colostomy present,outcome
+3112,3113,434887,Disorders of bilirubin excretion,outcome
+3112,3113,434002,Mineral deficiency,outcome
+3112,3113,377283,Conjunctival hyperemia,outcome
+3112,3113,4218873,Glossopyrosis,outcome
+3112,3113,40481632,Ganglion cyst,outcome
+3112,3113,432596,Immune defect,outcome
+3112,3113,4199550,Unable to mobilize,outcome
+3112,3113,435849,Parietoalveolar pneumopathy,outcome
+3112,3113,196454,Colostomy and enterostomy malfunction,outcome
+3112,3113,141667,Laxity of ligament,outcome
+3112,3113,4305303,Sleep deprivation,outcome
+3112,3113,4168681,Irritability and anger,outcome
+3112,3113,4229897,Stupor,outcome
+3112,3113,434872,Infection by Trichomonas,outcome
+3112,3113,4090353,Incompetent urethral closure mechanism,outcome
+3112,3113,441266,Thiamine deficiency,outcome
+3112,3113,439035,Otosclerosis,outcome
+3112,3113,440068,Psychosexual dysfunction,outcome
+3112,3113,4216894,Precipitous drop in hematocrit,outcome
+3112,3113,137443,Mechanical complication due to skin graft failure AND/OR rejection,outcome
+3112,3113,435088,Senility,outcome
+3112,3113,4262562,Abnormal heart beat,outcome
+3112,3113,436088,Nondependent opioid abuse in remission,outcome
+3112,3113,4182164,Temporomandibular joint crepitus,outcome
+3112,3113,378765,Tympanosclerosis,outcome
+3112,3113,438391,Amino acid transport disorder,outcome
+3112,3113,133088,Late amputation stump complication,outcome
+3112,3113,193240,Acute generalized peritonitis,outcome
+3112,3113,4051630,Malingering,outcome
+3112,3113,437092,Physiological development failure,outcome
+3112,3113,437448,Exhaustion due to excessive exertion,outcome
+3112,3113,443172,"Splinter of face, without major open wound",outcome
+3112,3113,436409,Abnormal pupil,outcome
+3112,3113,443447,Iatrogenic hypotension,outcome
+3112,3113,440193,Wristdrop,outcome
+3112,3113,372329,Dissociated deviation,outcome
+3112,3113,141456,Chilblains,outcome
+3112,3113,4022071,Convalescence,outcome
+3112,3113,4118057,Fetal or neonatal effect of maternal oligohydramnios,outcome
+3112,3113,4061157,Antenatal ultrasound scan abnormal,outcome
+3112,3113,440053,Infestation by insect,outcome
+3112,3113,437078,Large head,outcome
+3112,3113,434485,Increase in body fat,outcome
+3112,3113,134746,Finger clubbing,outcome
+3112,3113,435720,Adverse anesthesia outcome,outcome
+3112,3113,439788,Galactosemia,outcome
+3112,3113,40481585,Hypoplasia of maxillary bone,outcome
+3112,3113,433441,Ectopic production of endocrine substance,outcome
+3112,3113,134386,Gingival recession,outcome
+3112,3113,433244,Tooth loss,outcome
+3112,3113,432672,Fissure of nipple,outcome
+3112,3113,27826,Combination of endocrine dysfunction,outcome
+3112,3113,443702,Abnormal response to nerve stimulation,outcome
+3112,3113,443082,Starvation,outcome
+3112,3113,436233,Delayed milestone,outcome
+3112,3113,4276354,Bromhidrosis,outcome
+3119,3120,257011,Acute upper respiratory infection,outcome
+3119,3120,438624,Complication of renal dialysis,outcome
+3119,3120,4210746,Localized amyloidosis,outcome
+3119,3120,436828,Saliva abnormal,outcome
+3119,3120,4223399,Iliac crest spur,outcome
+3119,3120,4155818,Does climb,outcome
+3119,3120,4305376,Porphyria,outcome
+3119,3120,134315,Myelophthisis,outcome
+3119,3120,135852,Teething syndrome,outcome
+3119,3120,134117,Subcorneal pustular dermatosis,outcome
+3119,3120,4111720,Sequelae of subarachnoid hemorrhage,outcome
+3119,3120,435028,Puerperal pyrexia of unknown origin,outcome
+3119,3120,198846,Enthesopathy of hip region,outcome
+3119,3120,438759,Descemet's membrane fold,outcome
+3119,3120,4229403,Flat anterior chamber of eye,outcome
+3119,3120,136538,Closed fracture larynx and/or trachea,outcome
+3119,3120,436426,Malleus mobility reduced,outcome
+3119,3120,380724,Corneal ghost vessels,outcome
+3119,3120,4173136,Agnosia,outcome
+3119,3120,4019971,Discord in school,outcome
+3119,3120,4228429,Carnitine deficiency,outcome
+3119,3120,4260364,Choledochal cyst,outcome
+3119,3120,436041,Leech infestation,outcome
+3119,3120,4287416,Hyperphenylalaninemia,outcome
+3119,3120,4216219,Bizarre personal appearance,outcome
+3119,3120,435574,Abnormal form of root of tooth,outcome
+3119,3120,4022078,Discord with counselor,outcome
+3119,3120,4213540,Cervical somatic dysfunction,outcome
+3119,3120,439082,Menopausal syndrome,outcome
+3119,3120,436230,Blood chemistry abnormal,outcome
+3119,3120,374375,Impacted cerumen,outcome
+3119,3120,201061,Diaphragmatic hernia,outcome
+3119,3120,80502,Osteoporosis,outcome
+3119,3120,196168,Irregular periods,outcome
+3119,3120,436070,Vitamin D deficiency,outcome
+3119,3120,377910,Deviated nasal septum,outcome
+3119,3120,443530,Hematochezia,outcome
+3119,3120,314754,Wheezing,outcome
+3119,3120,201613,Chronic nonalcoholic liver disease,outcome
+3119,3120,4110815,"Sensorineural hearing loss, bilateral",outcome
+3119,3120,437390,Hypoxemia,outcome
+3119,3120,440129,Hypertrophy of nasal turbinates,outcome
+3119,3120,138384,Acquired hypothyroidism,outcome
+3119,3120,439405,Walking disability,outcome
+3119,3120,435515,Hypo-osmolality and or hyponatremia,outcome
+3119,3120,437833,Hypokalemia,outcome
+3119,3120,261880,Atelectasis,outcome
+3119,3120,195873,Leukorrhea,outcome
+3119,3120,45768910,Uncomplicated asthma,outcome
+3119,3120,201916,Ureteric stone,outcome
+3119,3120,4009585,Abnormal urine,outcome
+3119,3120,4164898,Diverticulosis of large intestine without diverticulitis,outcome
+3119,3120,192450,Retention of urine,outcome
+3119,3120,81175,Contusion of chest,outcome
+3119,3120,136237,Cardiovascular system problem,outcome
+3119,3120,257683,Posterior rhinorrhea,outcome
+3119,3120,72737,Microcalcifications of the breast,outcome
+3119,3120,437038,Blood in urine,outcome
+3119,3120,436246,Reduced libido,outcome
+3119,3120,441417,Incoordination,outcome
+3119,3120,4236484,Paresthesia,outcome
+3119,3120,4002818,Spasm of back muscles,outcome
+3119,3120,200528,Ascites,outcome
+3119,3120,4152351,"Abdominal distension, gaseous",outcome
+3119,3120,76153,Low compliance bladder,outcome
+3119,3120,4248728,Snoring,outcome
+3119,3120,438791,Pulmonary congestion and hypostasis,outcome
+3119,3120,4311591,Cramp in limb,outcome
+3119,3120,73564,Full thickness rotator cuff tear,outcome
+3119,3120,77079,Spinal stenosis,outcome
+3119,3120,4344500,Impingement syndrome of shoulder region,outcome
+3119,3120,433527,Endometriosis (clinical),outcome
+3119,3120,432798,"Mechanical complication of internal orthopedic device, implant AND/OR graft",outcome
+3119,3120,4170770,Epidermoid cyst,outcome
+3119,3120,78162,Peripheral vertigo,outcome
+3119,3120,81380,Cervical syndrome,outcome
+3119,3120,4103703,Melena,outcome
+3119,3120,72404,Joint stiffness,outcome
+3119,3120,438130,Opioid abuse,outcome
+3119,3120,197675,Incontinence of feces,outcome
+3119,3120,40480893,Nonspecific tuberculin test reaction,outcome
+3119,3120,73026,Abnormal breath sounds,outcome
+3119,3120,439790,Psychalgia,outcome
+3119,3120,435508,Adrenal cortical hypofunction,outcome
+3119,3120,434004,Hypervolemia,outcome
+3119,3120,4012570,High risk sexual behavior,outcome
+3119,3120,133729,Hyperparathyroidism,outcome
+3119,3120,195926,Slowing of urinary stream,outcome
+3119,3120,372324,Eustachian tube disorder,outcome
+3119,3120,4295287,Hypercoagulability state,outcome
+3119,3120,256449,Bronchiectasis,outcome
+3119,3120,4022076,Patient dependence on care provider,outcome
+3119,3120,4092743,Unsteady when standing,outcome
+3119,3120,4115402,Difficulty sleeping,outcome
+3119,3120,138466,Leukoplakia of oral mucosa,outcome
+3119,3120,140173,Telogen effluvium,outcome
+3119,3120,435723,Wound seroma,outcome
+3119,3120,253796,Pneumothorax,outcome
+3119,3120,4098604,Hypomagnesemia,outcome
+3119,3120,4059015,Falls,outcome
+3119,3120,200485,Pressure ulcer of buttock,outcome
+3119,3120,4083487,Macular drusen,outcome
+3119,3120,4058388,Hypertrophic scar,outcome
+3119,3120,434916,"Amphetamine or psychostimulant dependence, continuous",outcome
+3119,3120,80463,Fetus with chromosomal abnormality with antenatal problem,outcome
+3119,3120,4166231,Genetic predisposition,outcome
+3119,3120,134765,Cachexia,outcome
+3119,3120,44783954,Acid reflux,outcome
+3119,3120,195212,Hypercortisolism,outcome
+3119,3120,4125590,Slurred speech,outcome
+3119,3120,4201390,Colostomy present,outcome
+3119,3120,434887,Disorders of bilirubin excretion,outcome
+3119,3120,434002,Mineral deficiency,outcome
+3119,3120,377283,Conjunctival hyperemia,outcome
+3119,3120,4218873,Glossopyrosis,outcome
+3119,3120,40481632,Ganglion cyst,outcome
+3119,3120,432596,Immune defect,outcome
+3119,3120,4199550,Unable to mobilize,outcome
+3119,3120,435849,Parietoalveolar pneumopathy,outcome
+3119,3120,196454,Colostomy and enterostomy malfunction,outcome
+3119,3120,141667,Laxity of ligament,outcome
+3119,3120,4305303,Sleep deprivation,outcome
+3119,3120,4168681,Irritability and anger,outcome
+3119,3120,4229897,Stupor,outcome
+3119,3120,434872,Infection by Trichomonas,outcome
+3119,3120,4090353,Incompetent urethral closure mechanism,outcome
+3119,3120,441266,Thiamine deficiency,outcome
+3119,3120,439035,Otosclerosis,outcome
+3119,3120,440068,Psychosexual dysfunction,outcome
+3119,3120,4216894,Precipitous drop in hematocrit,outcome
+3119,3120,137443,Mechanical complication due to skin graft failure AND/OR rejection,outcome
+3119,3120,435088,Senility,outcome
+3119,3120,4262562,Abnormal heart beat,outcome
+3119,3120,436088,Nondependent opioid abuse in remission,outcome
+3119,3120,4182164,Temporomandibular joint crepitus,outcome
+3119,3120,378765,Tympanosclerosis,outcome
+3119,3120,438391,Amino acid transport disorder,outcome
+3119,3120,133088,Late amputation stump complication,outcome
+3119,3120,193240,Acute generalized peritonitis,outcome
+3119,3120,4051630,Malingering,outcome
+3119,3120,437092,Physiological development failure,outcome
+3119,3120,437448,Exhaustion due to excessive exertion,outcome
+3119,3120,443172,"Splinter of face, without major open wound",outcome
+3119,3120,436409,Abnormal pupil,outcome
+3119,3120,443447,Iatrogenic hypotension,outcome
+3119,3120,440193,Wristdrop,outcome
+3119,3120,372329,Dissociated deviation,outcome
+3119,3120,141456,Chilblains,outcome
+3119,3120,4022071,Convalescence,outcome
+3119,3120,4118057,Fetal or neonatal effect of maternal oligohydramnios,outcome
+3119,3120,4061157,Antenatal ultrasound scan abnormal,outcome
+3119,3120,440053,Infestation by insect,outcome
+3119,3120,437078,Large head,outcome
+3119,3120,434485,Increase in body fat,outcome
+3119,3120,134746,Finger clubbing,outcome
+3119,3120,435720,Adverse anesthesia outcome,outcome
+3119,3120,439788,Galactosemia,outcome
+3119,3120,40481585,Hypoplasia of maxillary bone,outcome
+3119,3120,433441,Ectopic production of endocrine substance,outcome
+3119,3120,134386,Gingival recession,outcome
+3119,3120,433244,Tooth loss,outcome
+3119,3120,432672,Fissure of nipple,outcome
+3119,3120,27826,Combination of endocrine dysfunction,outcome
+3119,3120,443702,Abnormal response to nerve stimulation,outcome
+3119,3120,443082,Starvation,outcome
+3119,3120,436233,Delayed milestone,outcome
+3119,3120,4276354,Bromhidrosis,outcome
+3071,3081,257011,Acute upper respiratory infection,outcome
+3071,3081,438624,Complication of renal dialysis,outcome
+3071,3081,4210746,Localized amyloidosis,outcome
+3071,3081,436828,Saliva abnormal,outcome
+3071,3081,4223399,Iliac crest spur,outcome
+3071,3081,4155818,Does climb,outcome
+3071,3081,4305376,Porphyria,outcome
+3071,3081,134315,Myelophthisis,outcome
+3071,3081,135852,Teething syndrome,outcome
+3071,3081,134117,Subcorneal pustular dermatosis,outcome
+3071,3081,4111720,Sequelae of subarachnoid hemorrhage,outcome
+3071,3081,435028,Puerperal pyrexia of unknown origin,outcome
+3071,3081,198846,Enthesopathy of hip region,outcome
+3071,3081,438759,Descemet's membrane fold,outcome
+3071,3081,4229403,Flat anterior chamber of eye,outcome
+3071,3081,136538,Closed fracture larynx and/or trachea,outcome
+3071,3081,436426,Malleus mobility reduced,outcome
+3071,3081,380724,Corneal ghost vessels,outcome
+3071,3081,4173136,Agnosia,outcome
+3071,3081,4019971,Discord in school,outcome
+3071,3081,4228429,Carnitine deficiency,outcome
+3071,3081,4260364,Choledochal cyst,outcome
+3071,3081,436041,Leech infestation,outcome
+3071,3081,4287416,Hyperphenylalaninemia,outcome
+3071,3081,4216219,Bizarre personal appearance,outcome
+3071,3081,435574,Abnormal form of root of tooth,outcome
+3071,3081,4022078,Discord with counselor,outcome
+3071,3081,4213540,Cervical somatic dysfunction,outcome
+3071,3081,439082,Menopausal syndrome,outcome
+3071,3081,436230,Blood chemistry abnormal,outcome
+3071,3081,374375,Impacted cerumen,outcome
+3071,3081,201061,Diaphragmatic hernia,outcome
+3071,3081,80502,Osteoporosis,outcome
+3071,3081,196168,Irregular periods,outcome
+3071,3081,436070,Vitamin D deficiency,outcome
+3071,3081,377910,Deviated nasal septum,outcome
+3071,3081,443530,Hematochezia,outcome
+3071,3081,314754,Wheezing,outcome
+3071,3081,201613,Chronic nonalcoholic liver disease,outcome
+3071,3081,4110815,"Sensorineural hearing loss, bilateral",outcome
+3071,3081,437390,Hypoxemia,outcome
+3071,3081,440129,Hypertrophy of nasal turbinates,outcome
+3071,3081,138384,Acquired hypothyroidism,outcome
+3071,3081,439405,Walking disability,outcome
+3071,3081,435515,Hypo-osmolality and or hyponatremia,outcome
+3071,3081,437833,Hypokalemia,outcome
+3071,3081,261880,Atelectasis,outcome
+3071,3081,195873,Leukorrhea,outcome
+3071,3081,45768910,Uncomplicated asthma,outcome
+3071,3081,201916,Ureteric stone,outcome
+3071,3081,4009585,Abnormal urine,outcome
+3071,3081,4164898,Diverticulosis of large intestine without diverticulitis,outcome
+3071,3081,192450,Retention of urine,outcome
+3071,3081,81175,Contusion of chest,outcome
+3071,3081,136237,Cardiovascular system problem,outcome
+3071,3081,257683,Posterior rhinorrhea,outcome
+3071,3081,72737,Microcalcifications of the breast,outcome
+3071,3081,437038,Blood in urine,outcome
+3071,3081,436246,Reduced libido,outcome
+3071,3081,441417,Incoordination,outcome
+3071,3081,4236484,Paresthesia,outcome
+3071,3081,4002818,Spasm of back muscles,outcome
+3071,3081,200528,Ascites,outcome
+3071,3081,4152351,"Abdominal distension, gaseous",outcome
+3071,3081,76153,Low compliance bladder,outcome
+3071,3081,4248728,Snoring,outcome
+3071,3081,438791,Pulmonary congestion and hypostasis,outcome
+3071,3081,4311591,Cramp in limb,outcome
+3071,3081,73564,Full thickness rotator cuff tear,outcome
+3071,3081,77079,Spinal stenosis,outcome
+3071,3081,4344500,Impingement syndrome of shoulder region,outcome
+3071,3081,433527,Endometriosis (clinical),outcome
+3071,3081,432798,"Mechanical complication of internal orthopedic device, implant AND/OR graft",outcome
+3071,3081,4170770,Epidermoid cyst,outcome
+3071,3081,78162,Peripheral vertigo,outcome
+3071,3081,81380,Cervical syndrome,outcome
+3071,3081,4103703,Melena,outcome
+3071,3081,72404,Joint stiffness,outcome
+3071,3081,438130,Opioid abuse,outcome
+3071,3081,197675,Incontinence of feces,outcome
+3071,3081,40480893,Nonspecific tuberculin test reaction,outcome
+3071,3081,73026,Abnormal breath sounds,outcome
+3071,3081,439790,Psychalgia,outcome
+3071,3081,435508,Adrenal cortical hypofunction,outcome
+3071,3081,434004,Hypervolemia,outcome
+3071,3081,4012570,High risk sexual behavior,outcome
+3071,3081,133729,Hyperparathyroidism,outcome
+3071,3081,195926,Slowing of urinary stream,outcome
+3071,3081,372324,Eustachian tube disorder,outcome
+3071,3081,4295287,Hypercoagulability state,outcome
+3071,3081,256449,Bronchiectasis,outcome
+3071,3081,4022076,Patient dependence on care provider,outcome
+3071,3081,4092743,Unsteady when standing,outcome
+3071,3081,4115402,Difficulty sleeping,outcome
+3071,3081,138466,Leukoplakia of oral mucosa,outcome
+3071,3081,140173,Telogen effluvium,outcome
+3071,3081,435723,Wound seroma,outcome
+3071,3081,253796,Pneumothorax,outcome
+3071,3081,4098604,Hypomagnesemia,outcome
+3071,3081,4059015,Falls,outcome
+3071,3081,200485,Pressure ulcer of buttock,outcome
+3071,3081,4083487,Macular drusen,outcome
+3071,3081,4058388,Hypertrophic scar,outcome
+3071,3081,434916,"Amphetamine or psychostimulant dependence, continuous",outcome
+3071,3081,80463,Fetus with chromosomal abnormality with antenatal problem,outcome
+3071,3081,4166231,Genetic predisposition,outcome
+3071,3081,134765,Cachexia,outcome
+3071,3081,44783954,Acid reflux,outcome
+3071,3081,195212,Hypercortisolism,outcome
+3071,3081,4125590,Slurred speech,outcome
+3071,3081,4201390,Colostomy present,outcome
+3071,3081,434887,Disorders of bilirubin excretion,outcome
+3071,3081,434002,Mineral deficiency,outcome
+3071,3081,377283,Conjunctival hyperemia,outcome
+3071,3081,4218873,Glossopyrosis,outcome
+3071,3081,40481632,Ganglion cyst,outcome
+3071,3081,432596,Immune defect,outcome
+3071,3081,4199550,Unable to mobilize,outcome
+3071,3081,435849,Parietoalveolar pneumopathy,outcome
+3071,3081,196454,Colostomy and enterostomy malfunction,outcome
+3071,3081,141667,Laxity of ligament,outcome
+3071,3081,4305303,Sleep deprivation,outcome
+3071,3081,4168681,Irritability and anger,outcome
+3071,3081,4229897,Stupor,outcome
+3071,3081,434872,Infection by Trichomonas,outcome
+3071,3081,4090353,Incompetent urethral closure mechanism,outcome
+3071,3081,441266,Thiamine deficiency,outcome
+3071,3081,439035,Otosclerosis,outcome
+3071,3081,440068,Psychosexual dysfunction,outcome
+3071,3081,4216894,Precipitous drop in hematocrit,outcome
+3071,3081,137443,Mechanical complication due to skin graft failure AND/OR rejection,outcome
+3071,3081,435088,Senility,outcome
+3071,3081,4262562,Abnormal heart beat,outcome
+3071,3081,436088,Nondependent opioid abuse in remission,outcome
+3071,3081,4182164,Temporomandibular joint crepitus,outcome
+3071,3081,378765,Tympanosclerosis,outcome
+3071,3081,438391,Amino acid transport disorder,outcome
+3071,3081,133088,Late amputation stump complication,outcome
+3071,3081,193240,Acute generalized peritonitis,outcome
+3071,3081,4051630,Malingering,outcome
+3071,3081,437092,Physiological development failure,outcome
+3071,3081,437448,Exhaustion due to excessive exertion,outcome
+3071,3081,443172,"Splinter of face, without major open wound",outcome
+3071,3081,436409,Abnormal pupil,outcome
+3071,3081,443447,Iatrogenic hypotension,outcome
+3071,3081,440193,Wristdrop,outcome
+3071,3081,372329,Dissociated deviation,outcome
+3071,3081,141456,Chilblains,outcome
+3071,3081,4022071,Convalescence,outcome
+3071,3081,4118057,Fetal or neonatal effect of maternal oligohydramnios,outcome
+3071,3081,4061157,Antenatal ultrasound scan abnormal,outcome
+3071,3081,440053,Infestation by insect,outcome
+3071,3081,437078,Large head,outcome
+3071,3081,434485,Increase in body fat,outcome
+3071,3081,134746,Finger clubbing,outcome
+3071,3081,435720,Adverse anesthesia outcome,outcome
+3071,3081,439788,Galactosemia,outcome
+3071,3081,40481585,Hypoplasia of maxillary bone,outcome
+3071,3081,433441,Ectopic production of endocrine substance,outcome
+3071,3081,134386,Gingival recession,outcome
+3071,3081,433244,Tooth loss,outcome
+3071,3081,432672,Fissure of nipple,outcome
+3071,3081,27826,Combination of endocrine dysfunction,outcome
+3071,3081,443702,Abnormal response to nerve stimulation,outcome
+3071,3081,443082,Starvation,outcome
+3071,3081,436233,Delayed milestone,outcome
+3071,3081,4276354,Bromhidrosis,outcome
+3076,3083,257011,Acute upper respiratory infection,outcome
+3076,3083,438624,Complication of renal dialysis,outcome
+3076,3083,4210746,Localized amyloidosis,outcome
+3076,3083,436828,Saliva abnormal,outcome
+3076,3083,4223399,Iliac crest spur,outcome
+3076,3083,4155818,Does climb,outcome
+3076,3083,4305376,Porphyria,outcome
+3076,3083,134315,Myelophthisis,outcome
+3076,3083,135852,Teething syndrome,outcome
+3076,3083,134117,Subcorneal pustular dermatosis,outcome
+3076,3083,4111720,Sequelae of subarachnoid hemorrhage,outcome
+3076,3083,435028,Puerperal pyrexia of unknown origin,outcome
+3076,3083,198846,Enthesopathy of hip region,outcome
+3076,3083,438759,Descemet's membrane fold,outcome
+3076,3083,4229403,Flat anterior chamber of eye,outcome
+3076,3083,136538,Closed fracture larynx and/or trachea,outcome
+3076,3083,436426,Malleus mobility reduced,outcome
+3076,3083,380724,Corneal ghost vessels,outcome
+3076,3083,4173136,Agnosia,outcome
+3076,3083,4019971,Discord in school,outcome
+3076,3083,4228429,Carnitine deficiency,outcome
+3076,3083,4260364,Choledochal cyst,outcome
+3076,3083,436041,Leech infestation,outcome
+3076,3083,4287416,Hyperphenylalaninemia,outcome
+3076,3083,4216219,Bizarre personal appearance,outcome
+3076,3083,435574,Abnormal form of root of tooth,outcome
+3076,3083,4022078,Discord with counselor,outcome
+3076,3083,4213540,Cervical somatic dysfunction,outcome
+3076,3083,439082,Menopausal syndrome,outcome
+3076,3083,436230,Blood chemistry abnormal,outcome
+3076,3083,374375,Impacted cerumen,outcome
+3076,3083,201061,Diaphragmatic hernia,outcome
+3076,3083,80502,Osteoporosis,outcome
+3076,3083,196168,Irregular periods,outcome
+3076,3083,436070,Vitamin D deficiency,outcome
+3076,3083,377910,Deviated nasal septum,outcome
+3076,3083,443530,Hematochezia,outcome
+3076,3083,314754,Wheezing,outcome
+3076,3083,201613,Chronic nonalcoholic liver disease,outcome
+3076,3083,4110815,"Sensorineural hearing loss, bilateral",outcome
+3076,3083,437390,Hypoxemia,outcome
+3076,3083,440129,Hypertrophy of nasal turbinates,outcome
+3076,3083,138384,Acquired hypothyroidism,outcome
+3076,3083,439405,Walking disability,outcome
+3076,3083,435515,Hypo-osmolality and or hyponatremia,outcome
+3076,3083,437833,Hypokalemia,outcome
+3076,3083,261880,Atelectasis,outcome
+3076,3083,195873,Leukorrhea,outcome
+3076,3083,45768910,Uncomplicated asthma,outcome
+3076,3083,201916,Ureteric stone,outcome
+3076,3083,4009585,Abnormal urine,outcome
+3076,3083,4164898,Diverticulosis of large intestine without diverticulitis,outcome
+3076,3083,192450,Retention of urine,outcome
+3076,3083,81175,Contusion of chest,outcome
+3076,3083,136237,Cardiovascular system problem,outcome
+3076,3083,257683,Posterior rhinorrhea,outcome
+3076,3083,72737,Microcalcifications of the breast,outcome
+3076,3083,437038,Blood in urine,outcome
+3076,3083,436246,Reduced libido,outcome
+3076,3083,441417,Incoordination,outcome
+3076,3083,4236484,Paresthesia,outcome
+3076,3083,4002818,Spasm of back muscles,outcome
+3076,3083,200528,Ascites,outcome
+3076,3083,4152351,"Abdominal distension, gaseous",outcome
+3076,3083,76153,Low compliance bladder,outcome
+3076,3083,4248728,Snoring,outcome
+3076,3083,438791,Pulmonary congestion and hypostasis,outcome
+3076,3083,4311591,Cramp in limb,outcome
+3076,3083,73564,Full thickness rotator cuff tear,outcome
+3076,3083,77079,Spinal stenosis,outcome
+3076,3083,4344500,Impingement syndrome of shoulder region,outcome
+3076,3083,433527,Endometriosis (clinical),outcome
+3076,3083,432798,"Mechanical complication of internal orthopedic device, implant AND/OR graft",outcome
+3076,3083,4170770,Epidermoid cyst,outcome
+3076,3083,78162,Peripheral vertigo,outcome
+3076,3083,81380,Cervical syndrome,outcome
+3076,3083,4103703,Melena,outcome
+3076,3083,72404,Joint stiffness,outcome
+3076,3083,438130,Opioid abuse,outcome
+3076,3083,197675,Incontinence of feces,outcome
+3076,3083,40480893,Nonspecific tuberculin test reaction,outcome
+3076,3083,73026,Abnormal breath sounds,outcome
+3076,3083,439790,Psychalgia,outcome
+3076,3083,435508,Adrenal cortical hypofunction,outcome
+3076,3083,434004,Hypervolemia,outcome
+3076,3083,4012570,High risk sexual behavior,outcome
+3076,3083,133729,Hyperparathyroidism,outcome
+3076,3083,195926,Slowing of urinary stream,outcome
+3076,3083,372324,Eustachian tube disorder,outcome
+3076,3083,4295287,Hypercoagulability state,outcome
+3076,3083,256449,Bronchiectasis,outcome
+3076,3083,4022076,Patient dependence on care provider,outcome
+3076,3083,4092743,Unsteady when standing,outcome
+3076,3083,4115402,Difficulty sleeping,outcome
+3076,3083,138466,Leukoplakia of oral mucosa,outcome
+3076,3083,140173,Telogen effluvium,outcome
+3076,3083,435723,Wound seroma,outcome
+3076,3083,253796,Pneumothorax,outcome
+3076,3083,4098604,Hypomagnesemia,outcome
+3076,3083,4059015,Falls,outcome
+3076,3083,200485,Pressure ulcer of buttock,outcome
+3076,3083,4083487,Macular drusen,outcome
+3076,3083,4058388,Hypertrophic scar,outcome
+3076,3083,434916,"Amphetamine or psychostimulant dependence, continuous",outcome
+3076,3083,80463,Fetus with chromosomal abnormality with antenatal problem,outcome
+3076,3083,4166231,Genetic predisposition,outcome
+3076,3083,134765,Cachexia,outcome
+3076,3083,44783954,Acid reflux,outcome
+3076,3083,195212,Hypercortisolism,outcome
+3076,3083,4125590,Slurred speech,outcome
+3076,3083,4201390,Colostomy present,outcome
+3076,3083,434887,Disorders of bilirubin excretion,outcome
+3076,3083,434002,Mineral deficiency,outcome
+3076,3083,377283,Conjunctival hyperemia,outcome
+3076,3083,4218873,Glossopyrosis,outcome
+3076,3083,40481632,Ganglion cyst,outcome
+3076,3083,432596,Immune defect,outcome
+3076,3083,4199550,Unable to mobilize,outcome
+3076,3083,435849,Parietoalveolar pneumopathy,outcome
+3076,3083,196454,Colostomy and enterostomy malfunction,outcome
+3076,3083,141667,Laxity of ligament,outcome
+3076,3083,4305303,Sleep deprivation,outcome
+3076,3083,4168681,Irritability and anger,outcome
+3076,3083,4229897,Stupor,outcome
+3076,3083,434872,Infection by Trichomonas,outcome
+3076,3083,4090353,Incompetent urethral closure mechanism,outcome
+3076,3083,441266,Thiamine deficiency,outcome
+3076,3083,439035,Otosclerosis,outcome
+3076,3083,440068,Psychosexual dysfunction,outcome
+3076,3083,4216894,Precipitous drop in hematocrit,outcome
+3076,3083,137443,Mechanical complication due to skin graft failure AND/OR rejection,outcome
+3076,3083,435088,Senility,outcome
+3076,3083,4262562,Abnormal heart beat,outcome
+3076,3083,436088,Nondependent opioid abuse in remission,outcome
+3076,3083,4182164,Temporomandibular joint crepitus,outcome
+3076,3083,378765,Tympanosclerosis,outcome
+3076,3083,438391,Amino acid transport disorder,outcome
+3076,3083,133088,Late amputation stump complication,outcome
+3076,3083,193240,Acute generalized peritonitis,outcome
+3076,3083,4051630,Malingering,outcome
+3076,3083,437092,Physiological development failure,outcome
+3076,3083,437448,Exhaustion due to excessive exertion,outcome
+3076,3083,443172,"Splinter of face, without major open wound",outcome
+3076,3083,436409,Abnormal pupil,outcome
+3076,3083,443447,Iatrogenic hypotension,outcome
+3076,3083,440193,Wristdrop,outcome
+3076,3083,372329,Dissociated deviation,outcome
+3076,3083,141456,Chilblains,outcome
+3076,3083,4022071,Convalescence,outcome
+3076,3083,4118057,Fetal or neonatal effect of maternal oligohydramnios,outcome
+3076,3083,4061157,Antenatal ultrasound scan abnormal,outcome
+3076,3083,440053,Infestation by insect,outcome
+3076,3083,437078,Large head,outcome
+3076,3083,434485,Increase in body fat,outcome
+3076,3083,134746,Finger clubbing,outcome
+3076,3083,435720,Adverse anesthesia outcome,outcome
+3076,3083,439788,Galactosemia,outcome
+3076,3083,40481585,Hypoplasia of maxillary bone,outcome
+3076,3083,433441,Ectopic production of endocrine substance,outcome
+3076,3083,134386,Gingival recession,outcome
+3076,3083,433244,Tooth loss,outcome
+3076,3083,432672,Fissure of nipple,outcome
+3076,3083,27826,Combination of endocrine dysfunction,outcome
+3076,3083,443702,Abnormal response to nerve stimulation,outcome
+3076,3083,443082,Starvation,outcome
+3076,3083,436233,Delayed milestone,outcome
+3076,3083,4276354,Bromhidrosis,outcome
