@@ -4,7 +4,7 @@
 \name{ReproducibilitySodhi2023-package}
 \alias{ReproducibilitySodhi2023}
 \alias{ReproducibilitySodhi2023-package}
-\title{ReproducibilitySodhi2023: A Package Skeleton for Comparative Effectiveness Studies}
+\title{ReproducibilitySodhi2023: Reproduction of Sodhi Study in JAMA 2023}
 \description{
 A skeleton package, to be used as a starting point when implementing comparative effect studies.
 }

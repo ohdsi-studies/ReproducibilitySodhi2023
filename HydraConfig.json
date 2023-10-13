@@ -5,11 +5,11 @@
 	"actions":[{
 		"type": "fileNameFindAndReplace",
 		"input": "packageName",
-		"find": "JAMASodhi"
+		"find": "ReproducibilitySodhi2023"
 	},{
 		"type": "stringFindAndReplace",
 		"input": "packageName",
-		"find": "JAMASodhi"
+		"find": "ReproducibilitySodhi2023"
 	},{
 		"type": "jsonArrayToCsv",
 		"input": "cohortDefinitions",

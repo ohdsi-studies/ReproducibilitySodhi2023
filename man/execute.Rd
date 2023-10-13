@@ -90,32 +90,35 @@ Synthetic Public Use Files (SynPUFs)').}
 \item{maxCores}{How many parallel cores should be used? If more cores are made available
 this can speed up the analyses.}
 
-\item{minCellCount}{The minimum number of subjects contributing to a count before it can be included 
+\item{minCellCount}{The minimum number of subjects contributing to a count before it can be included
 in packaged results.}
 }
 \description{
 Execute the Study
 }
 \details{
-This function executes the JAMASodhi Study.
+This function executes the ReproducibilitySodhi2023 Study.
 
 The \code{createCohorts}, \code{synthesizePositiveControls}, \code{runAnalyses}, and \code{runDiagnostics} arguments
 are intended to be used to run parts of the full study at a time, but none of the parts are considered to be optional.
 }
 \examples{
 \dontrun{
-connectionDetails <- createConnectionDetails(dbms = "postgresql",
-                                             user = "joe",
-                                             password = "secret",
-                                             server = "myserver")
+connectionDetails <- createConnectionDetails(
+  dbms = "postgresql",
+  user = "joe",
+  password = "secret",
+  server = "myserver"
+)
 
 execute(connectionDetails,
-        cdmDatabaseSchema = "cdm_data",
-        cohortDatabaseSchema = "study_results",
-        cohortTable = "cohort",
-        oracleTempSchema = NULL,
-        outputFolder = "c:/temp/study_results",
-        maxCores = 4)
+  cdmDatabaseSchema = "cdm_data",
+  cohortDatabaseSchema = "study_results",
+  cohortTable = "cohort",
+  oracleTempSchema = NULL,
+  outputFolder = "c:/temp/study_results",
+  maxCores = 4
+)
 }
 
 }
