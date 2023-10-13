@@ -1,10 +1,10 @@
-Package: JAMASodhi
+Package: ReproducibilitySodhi2023
 Type: Package
-Title: A Package Skeleton for Comparative Effectiveness Studies
+Title: Reproduction of Sodhi Study in JAMA 2023
 Version: 0.0.1
 Date: 2022-03-23
-Author: Martijn Schuemie [aut, cre]
-Maintainer: Martijn J. Schuemie <schuemie@ohdsi.org>
+Author: Asieh Golozar [aut, cre]
+Maintainer: Asieh Golozar <a.golozar@northeastern.edu>
 Description: A skeleton package, to be used as a starting point when implementing comparative effect studies.
 Depends:
   R(>= 4.0.0),
@@ -47,4 +47,5 @@ Remotes:
 License: Apache License 2.0
 VignetteBuilder: knitr
 LazyData: TRUE
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
+Encoding: UTF-8

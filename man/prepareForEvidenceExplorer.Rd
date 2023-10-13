@@ -15,7 +15,6 @@ prepareForEvidenceExplorer(resultsZipFile, dataFolder)
 Prepare results for the Evidence Explorer Shiny app.
 }
 \examples{
-
 \dontrun{
 # Add results from three databases to the Shiny app data folder:
 prepareForEvidenceExplorer("ResultsMDCD.zip", "/shinyData")
