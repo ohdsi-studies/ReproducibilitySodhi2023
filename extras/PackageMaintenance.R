@@ -1,6 +1,6 @@
 # Copyright 2022 Observational Health Data Sciences and Informatics
 #
-# This file is part of JAMASodhi
+# This file is part of ReproducibilitySodhi2023
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,14 +18,14 @@
 install.packages("styler")
 styler::style_pkg()
 remotes::install_github("ohdsi/OhdsiRTools")
-OhdsiRTools::checkUsagePackage("JAMASodhi")
+OhdsiRTools::checkUsagePackage("ReproducibilitySodhi2023")
 OhdsiRTools::updateCopyrightYearFolder()
 install.packages("devtools")
 devtools::spell_check()
 
 # Create manual -----------------------------------------------------------
-unlink("extras/JAMASodhi.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/JAMASodhi.pdf")
+unlink("extras/ReproducibilitySodhi2023.pdf")
+shell("R CMD Rd2pdf ./ --output=extras/ReproducibilitySodhi2023.pdf")
 
 # Create vignettes ---------------------------------------------------------
 install.packages("rmarkdown")
@@ -51,7 +51,7 @@ ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "Cohorts.csv",
                                                  insertTableSql = TRUE,
                                                  insertCohortCreationR = TRUE,
                                                  generateStats = FALSE,
-                                                 packageName = "JAMASodhi")
+                                                 packageName = "ReproducibilitySodhi2023")
 
 # Create analysis details -------------------------------------------------
 source("extras/CreateStudyAnalysisDetails.R")
@@ -59,7 +59,7 @@ createAnalysesDetails("inst/settings/")
 createPositiveControlSynthesisArgs("inst/settings/")
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::createRenvLockFile(rootPackage = "JAMASodhi",
+OhdsiRTools::createRenvLockFile(rootPackage = "ReproducibilitySodhi2023",
                                 mode = "description",
                                 includeRootPackage = FALSE,
                                 additionalRequiredPackages = "keyring")

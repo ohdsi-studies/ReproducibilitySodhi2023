@@ -1,6 +1,6 @@
 # Code that can be used to test whether the meta-analysis functionality works
-library(JAMASodhi)
-exportFolder <- "D:/JAMASodhi/export"
+library(ReproducibilitySodhi2023)
+exportFolder <- "D:/ReproducibilitySodhi2023/export"
 
 # Create a dummy additional database by copying all CSV files and changing the database ID --------------------------------
 databaseId <- "Dummy"
