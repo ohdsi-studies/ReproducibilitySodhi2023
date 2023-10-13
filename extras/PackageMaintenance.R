@@ -62,7 +62,7 @@ unlink("inst/doc/DataModel.tex")
 # createPositiveControlSynthesisArgs("inst/settings/")
 
 # Store environment in which the study was executed -----------------------
-# OhdsiRTools::createRenvLockFile(rootPackage = "ReproducibilitySodhi2023",
-#                                 mode = "description",
-#                                 includeRootPackage = FALSE,
-#                                 additionalRequiredPackages = "keyring")
+OhdsiRTools::createRenvLockFile(rootPackage = "ReproducibilitySodhi2023",
+                                mode = "description",
+                                includeRootPackage = FALSE,
+                                additionalRequiredPackages = "keyring")
