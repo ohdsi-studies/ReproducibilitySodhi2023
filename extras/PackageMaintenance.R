@@ -45,21 +45,24 @@ rmarkdown::render("vignettes/DataModel.Rmd",
 unlink("inst/doc/DataModel.tex")
 
 # Insert cohort definitions from ATLAS into package -----------------------
-remotes::install_github("ohdsi/ROhdsiWebApi")
-ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "Cohorts.csv",
-                                                 baseUrl = Sys.getenv("baseUrl"),
-                                                 insertTableSql = TRUE,
-                                                 insertCohortCreationR = TRUE,
-                                                 generateStats = FALSE,
-                                                 packageName = "ReproducibilitySodhi2023")
+## SKIP ALREADY DONE
+
+# remotes::install_github("ohdsi/ROhdsiWebApi")
+# ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "Cohorts.csv",
+#                                                  baseUrl = Sys.getenv("baseUrl"),
+#                                                  insertTableSql = TRUE,
+#                                                  insertCohortCreationR = TRUE,
+#                                                  generateStats = FALSE,
+#                                                  packageName = "ReproducibilitySodhi2023")
 
 # Create analysis details -------------------------------------------------
-source("extras/CreateStudyAnalysisDetails.R")
-createAnalysesDetails("inst/settings/")
-createPositiveControlSynthesisArgs("inst/settings/")
+## SKIP ALREADY DONE
+# source("extras/CreateStudyAnalysisDetails.R")
+# createAnalysesDetails("inst/settings/")
+# createPositiveControlSynthesisArgs("inst/settings/")
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::createRenvLockFile(rootPackage = "ReproducibilitySodhi2023",
-                                mode = "description",
-                                includeRootPackage = FALSE,
-                                additionalRequiredPackages = "keyring")
+# OhdsiRTools::createRenvLockFile(rootPackage = "ReproducibilitySodhi2023",
+#                                 mode = "description",
+#                                 includeRootPackage = FALSE,
+#                                 additionalRequiredPackages = "keyring")
