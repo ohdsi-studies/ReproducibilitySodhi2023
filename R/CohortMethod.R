@@ -115,14 +115,13 @@ addAnalysisDescription <- function(data, IdColumnName = "analysisId", nameColumn
   return(data)
 }
 
+
 createTcos <- function(outputFolder) {
-  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "ReproducibilitySodhi2023")
+  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "SkeletonComparativeEffectStudy")
   tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE)
   allControls <- getAllControls(outputFolder)
-  tcs <- unique(rbind(
-    tcosOfInterest[, c("targetId", "comparatorId")],
-    allControls[, c("targetId", "comparatorId")]
-  ))
+  tcs <- unique(rbind(tcosOfInterest[, c("targetId", "comparatorId")],
+                      allControls[, c("targetId", "comparatorId")]))
   createTco <- function(i) {
     targetId <- tcs$targetId[i]
     comparatorId <- tcs$comparatorId[i]
@@ -141,13 +140,11 @@ createTcos <- function(outputFolder) {
     } else if (length(includeConceptIds) > 0) {
       includeConceptIds <- as.numeric(strsplit(includeConceptIds, split = ";")[[1]])
     }
-    tco <- CohortMethod::createTargetComparatorOutcomes(
-      targetId = targetId,
-      comparatorId = comparatorId,
-      outcomeIds = outcomeIds,
-      excludedCovariateConceptIds = excludeConceptIds,
-      includedCovariateConceptIds = includeConceptIds
-    )
+    tco <- CohortMethod::createTargetComparatorOutcomes(targetId = targetId,
+                                                        comparatorId = comparatorId,
+                                                        outcomeIds = outcomeIds,
+                                                        excludedCovariateConceptIds = excludeConceptIds,
+                                                        includedCovariateConceptIds = includeConceptIds)
     return(tco)
   }
   tcosList <- lapply(1:nrow(tcs), createTco)
