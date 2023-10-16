@@ -117,7 +117,7 @@ addAnalysisDescription <- function(data, IdColumnName = "analysisId", nameColumn
 
 
 createTcos <- function(outputFolder) {
-  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "SkeletonComparativeEffectStudy")
+  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "ReproducibilitySodhi2023")
   tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE)
   allControls <- getAllControls(outputFolder)
   tcs <- unique(rbind(tcosOfInterest[, c("targetId", "comparatorId")],
