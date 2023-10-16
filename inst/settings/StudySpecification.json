@@ -46261,7 +46261,7 @@
   ],
   "doPositiveControlSynthesis": false,
   "id": 34,
-  "packageName": "JAMASodhi",
+  "packageName": "ReproducibilitySodhi2023",
   "negativeControls": [
     {
       "targetId": 3089,

@@ -1,6 +1,6 @@
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2023 Observational Health Data Sciences and Informatics
 #
-# This file is part of JAMASodhi
+# This file is part of ReproducibilitySodhi2023
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,46 +26,51 @@ runCohortMethod <- function(connectionDetails,
     dir.create(cmOutputFolder)
   }
   cmAnalysisListFile <- system.file("settings",
-                                    "cmAnalysisList.json",
-                                    package = "JAMASodhi")
+    "cmAnalysisList.json",
+    package = "ReproducibilitySodhi2023"
+  )
   cmAnalysisList <- CohortMethod::loadCmAnalysisList(cmAnalysisListFile)
   tcosList <- createTcos(outputFolder = outputFolder)
   outcomesOfInterest <- getOutcomesOfInterest()
-  results <- CohortMethod::runCmAnalyses(connectionDetails = connectionDetails,
-                                         cdmDatabaseSchema = cdmDatabaseSchema,
-                                         exposureDatabaseSchema = cohortDatabaseSchema,
-                                         exposureTable = cohortTable,
-                                         outcomeDatabaseSchema = cohortDatabaseSchema,
-                                         outcomeTable = cohortTable,
-                                         outputFolder = cmOutputFolder,
-                                         tempEmulationSchema = tempEmulationSchema,
-                                         cmAnalysisList = cmAnalysisList,
-                                         targetComparatorOutcomesList = tcosList,
-                                         getDbCohortMethodDataThreads = min(3, maxCores),
-                                         createStudyPopThreads = min(3, maxCores),
-                                         createPsThreads = max(1, round(maxCores/10)),
-                                         psCvThreads = min(10, maxCores),
-                                         trimMatchStratifyThreads = min(10, maxCores),
-                                         fitOutcomeModelThreads = max(1, round(maxCores/4)),
-                                         outcomeCvThreads = min(4, maxCores),
-                                         refitPsForEveryOutcome = FALSE,
-                                         outcomeIdsOfInterest = outcomesOfInterest)
-  
+  results <- CohortMethod::runCmAnalyses(
+    connectionDetails = connectionDetails,
+    cdmDatabaseSchema = cdmDatabaseSchema,
+    exposureDatabaseSchema = cohortDatabaseSchema,
+    exposureTable = cohortTable,
+    outcomeDatabaseSchema = cohortDatabaseSchema,
+    outcomeTable = cohortTable,
+    outputFolder = cmOutputFolder,
+    tempEmulationSchema = tempEmulationSchema,
+    cmAnalysisList = cmAnalysisList,
+    targetComparatorOutcomesList = tcosList,
+    getDbCohortMethodDataThreads = min(3, maxCores),
+    createStudyPopThreads = min(3, maxCores),
+    createPsThreads = max(1, round(maxCores / 10)),
+    psCvThreads = min(10, maxCores),
+    trimMatchStratifyThreads = min(10, maxCores),
+    fitOutcomeModelThreads = max(1, round(maxCores / 4)),
+    outcomeCvThreads = min(4, maxCores),
+    refitPsForEveryOutcome = FALSE,
+    outcomeIdsOfInterest = outcomesOfInterest
+  )
+
   message("Summarizing results")
-  analysisSummary <- CohortMethod::summarizeAnalyses(referenceTable = results, 
-                                                     outputFolder = cmOutputFolder)
+  analysisSummary <- CohortMethod::summarizeAnalyses(
+    referenceTable = results,
+    outputFolder = cmOutputFolder
+  )
   analysisSummary <- addCohortNames(analysisSummary, "targetId", "targetName")
   analysisSummary <- addCohortNames(analysisSummary, "comparatorId", "comparatorName")
   analysisSummary <- addCohortNames(analysisSummary, "outcomeId", "outcomeName")
   analysisSummary <- addAnalysisDescription(analysisSummary, "analysisId", "analysisDescription")
   write.csv(analysisSummary, file.path(outputFolder, "analysisSummary.csv"), row.names = FALSE)
-  
-  message("Computing covariate balance") 
+
+  message("Computing covariate balance")
   balanceFolder <- file.path(outputFolder, "balance")
   if (!file.exists(balanceFolder)) {
     dir.create(balanceFolder)
   }
-  subset <- results[results$outcomeId %in% outcomesOfInterest,]
+  subset <- results[results$outcomeId %in% outcomesOfInterest, ]
   subset <- subset[subset$strataFile != "", ]
   if (nrow(subset) > 0) {
     subset <- split(subset, seq(nrow(subset)))
@@ -76,8 +81,10 @@ runCohortMethod <- function(connectionDetails,
 }
 
 computeCovariateBalance <- function(row, cmOutputFolder, balanceFolder) {
-  outputFileName <- file.path(balanceFolder,
-                              sprintf("bal_t%s_c%s_o%s_a%s.rds", row$targetId, row$comparatorId, row$outcomeId, row$analysisId))
+  outputFileName <- file.path(
+    balanceFolder,
+    sprintf("bal_t%s_c%s_o%s_a%s.rds", row$targetId, row$comparatorId, row$outcomeId, row$analysisId)
+  )
   if (!file.exists(outputFileName)) {
     ParallelLogger::logTrace("Creating covariate balance file ", outputFileName)
     cohortMethodDataFile <- file.path(cmOutputFolder, row$cohortMethodDataFile)
@@ -91,8 +98,9 @@ computeCovariateBalance <- function(row, cmOutputFolder, balanceFolder) {
 
 addAnalysisDescription <- function(data, IdColumnName = "analysisId", nameColumnName = "analysisDescription") {
   cmAnalysisListFile <- system.file("settings",
-                                    "cmAnalysisList.json",
-                                    package = "JAMASodhi")
+    "cmAnalysisList.json",
+    package = "ReproducibilitySodhi2023"
+  )
   cmAnalysisList <- CohortMethod::loadCmAnalysisList(cmAnalysisListFile)
   idToName <- lapply(cmAnalysisList, function(x) data.frame(analysisId = x$analysisId, description = as.character(x$description)))
   idToName <- do.call("rbind", idToName)
@@ -102,17 +110,19 @@ addAnalysisDescription <- function(data, IdColumnName = "analysisId", nameColumn
   # Change order of columns:
   idCol <- which(colnames(data) == IdColumnName)
   if (idCol < ncol(data) - 1) {
-    data <- data[, c(1:idCol, ncol(data) , (idCol + 1):(ncol(data) - 1))]
+    data <- data[, c(1:idCol, ncol(data), (idCol + 1):(ncol(data) - 1))]
   }
   return(data)
 }
 
 createTcos <- function(outputFolder) {
-  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "JAMASodhi")
+  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "ReproducibilitySodhi2023")
   tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE)
   allControls <- getAllControls(outputFolder)
-  tcs <- unique(rbind(tcosOfInterest[, c("targetId", "comparatorId")],
-                      allControls[, c("targetId", "comparatorId")]))
+  tcs <- unique(rbind(
+    tcosOfInterest[, c("targetId", "comparatorId")],
+    allControls[, c("targetId", "comparatorId")]
+  ))
   createTco <- function(i) {
     targetId <- tcs$targetId[i]
     comparatorId <- tcs$comparatorId[i]
@@ -131,11 +141,13 @@ createTcos <- function(outputFolder) {
     } else if (length(includeConceptIds) > 0) {
       includeConceptIds <- as.numeric(strsplit(includeConceptIds, split = ";")[[1]])
     }
-    tco <- CohortMethod::createTargetComparatorOutcomes(targetId = targetId,
-                                                        comparatorId = comparatorId,
-                                                        outcomeIds = outcomeIds,
-                                                        excludedCovariateConceptIds = excludeConceptIds,
-                                                        includedCovariateConceptIds = includeConceptIds)
+    tco <- CohortMethod::createTargetComparatorOutcomes(
+      targetId = targetId,
+      comparatorId = comparatorId,
+      outcomeIds = outcomeIds,
+      excludedCovariateConceptIds = excludeConceptIds,
+      includedCovariateConceptIds = includeConceptIds
+    )
     return(tco)
   }
   tcosList <- lapply(1:nrow(tcs), createTco)
@@ -143,8 +155,8 @@ createTcos <- function(outputFolder) {
 }
 
 getOutcomesOfInterest <- function() {
-  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "JAMASodhi")
-  tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE) 
+  pathToCsv <- system.file("settings", "TcosOfInterest.csv", package = "ReproducibilitySodhi2023")
+  tcosOfInterest <- read.csv(pathToCsv, stringsAsFactors = FALSE)
   outcomeIds <- as.character(tcosOfInterest$outcomeIds)
   outcomeIds <- do.call("c", (strsplit(outcomeIds, split = ";")))
   outcomeIds <- unique(as.numeric(outcomeIds))
@@ -158,7 +170,7 @@ getAllControls <- function(outputFolder) {
     allControls <- read.csv(allControlsFile)
   } else {
     # Include only negative controls
-    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "JAMASodhi")
+    pathToCsv <- system.file("settings", "NegativeControls.csv", package = "ReproducibilitySodhi2023")
     allControls <- read.csv(pathToCsv)
     allControls$oldOutcomeId <- allControls$outcomeId
     allControls$targetEffectSize <- rep(1, nrow(allControls))

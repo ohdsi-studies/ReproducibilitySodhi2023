@@ -342,7 +342,7 @@
         "useKKTSwindle": false,
         "lowerLimit": 0.01,
         "attr_class": "cyclopsControl",
-        "cvRepetitions": 10,
+        "cvRepetitions": 2,
         "noiseLevel": "silent",
         "fold": 10,
         "minCVData": 100,
@@ -472,6 +472,7 @@
         "DistinctIngredientCountLongTerm": false,
         "ConditionOccurrencePrimaryInpatientShortTerm": false,
         "DemographicsAgeGroup": true,
+        "DemographicsAge": true,
         "DistinctProcedureCountShortTerm": false,
         "DistinctObservationCountMediumTerm": false,
         "includedCovariateConceptIds": [

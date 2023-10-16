@@ -35,7 +35,7 @@ Conducts a meta-analysis across PLE result sets
 }
 \details{
 Conducts a meta-analysis across result sets generated from a population level
-effect (PLE) study package.  Meta-analysis methodology is based on 
+effect (PLE) study package.  Meta-analysis methodology is based on
 DerSimonian and Laird (1986) or Schuemie et al. (2021).
 }
 \references{

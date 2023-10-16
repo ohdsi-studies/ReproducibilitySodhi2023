@@ -1,6 +1,6 @@
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2023 Observational Health Data Sciences and Informatics
 #
-# This file is part of JAMASodhi
+# This file is part of ReproducibilitySodhi2023
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@
 #' Execute the Study
 #'
 #' @details
-#' This function executes the JAMASodhi Study.
-#' 
+#' This function executes the ReproducibilitySodhi2023 Study.
+#'
 #' The \code{createCohorts}, \code{synthesizePositiveControls}, \code{runAnalyses}, and \code{runDiagnostics} arguments
 #' are intended to be used to run parts of the full study at a time, but none of the parts are considered to be optional.
 #'
@@ -58,26 +58,29 @@
 #' @param createCohorts        Create the cohortTable table with the exposure and outcome cohorts?
 #' @param synthesizePositiveControls  Should positive controls be synthesized?
 #' @param runAnalyses          Perform the cohort method analyses?
-#' @param packageResults       Should results be packaged for later sharing?     
+#' @param packageResults       Should results be packaged for later sharing?
 #' @param maxCores             How many parallel cores should be used? If more cores are made available
 #'                             this can speed up the analyses.
-#' @param minCellCount         The minimum number of subjects contributing to a count before it can be included 
+#' @param minCellCount         The minimum number of subjects contributing to a count before it can be included
 #'                             in packaged results.
 #'
 #' @examples
 #' \dontrun{
-#' connectionDetails <- createConnectionDetails(dbms = "postgresql",
-#'                                              user = "joe",
-#'                                              password = "secret",
-#'                                              server = "myserver")
+#' connectionDetails <- createConnectionDetails(
+#'   dbms = "postgresql",
+#'   user = "joe",
+#'   password = "secret",
+#'   server = "myserver"
+#' )
 #'
 #' execute(connectionDetails,
-#'         cdmDatabaseSchema = "cdm_data",
-#'         cohortDatabaseSchema = "study_results",
-#'         cohortTable = "cohort",
-#'         oracleTempSchema = NULL,
-#'         outputFolder = "c:/temp/study_results",
-#'         maxCores = 4)
+#'   cdmDatabaseSchema = "cdm_data",
+#'   cohortDatabaseSchema = "study_results",
+#'   cohortTable = "cohort",
+#'   oracleTempSchema = NULL,
+#'   outputFolder = "c:/temp/study_results",
+#'   maxCores = 4
+#' )
 #' }
 #'
 #' @export
@@ -112,7 +115,7 @@ execute <- function(connectionDetails,
   ParallelLogger::addDefaultErrorReportLogger(file.path(outputFolder, "errorReportR.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT_FILE_LOGGER", silent = TRUE))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT_ERRORREPORT_LOGGER", silent = TRUE), add = TRUE)
-  
+
   if (!is.null(oracleTempSchema) && oracleTempSchema != "") {
     warning("The 'oracleTempSchema' argument is deprecated. Use 'tempEmulationSchema' instead.")
     tempEmulationSchema <- oracleTempSchema
@@ -124,64 +127,74 @@ execute <- function(connectionDetails,
     warning("andromedaTempFolder '", getOption("andromedaTempFolder"), "' not found. Attempting to create folder")
     dir.create(getOption("andromedaTempFolder"), recursive = TRUE)
   }
-  
+
   if (verifyDependencies) {
     message("Checking whether correct package versions are installed")
     verifyDependencies()
   }
-  
+
   if (createCohorts) {
     message("Creating exposure and outcome cohorts")
-    createCohorts(connectionDetails = connectionDetails,
-                  cdmDatabaseSchema = cdmDatabaseSchema,
-                  cohortDatabaseSchema = cohortDatabaseSchema,
-                  cohortTableNames = list(cohortTable = cohortTable,
-                                          cohortInclusionTable = cohortInclusionTable,
-                                          cohortInclusionResultTable = cohortInclusionResultTable,
-                                          cohortInclusionStatsTable = cohortInclusionStatsTable,
-                                          cohortSummaryStatsTable = cohortSummaryStatsTable,
-                                          cohortCensorStatsTable = cohortCensorStatsTable),
-                  tempEmulationSchema = tempEmulationSchema,
-                  outputFolder = outputFolder)
+    createCohorts(
+      connectionDetails = connectionDetails,
+      cdmDatabaseSchema = cdmDatabaseSchema,
+      cohortDatabaseSchema = cohortDatabaseSchema,
+      cohortTableNames = list(
+        cohortTable = cohortTable,
+        cohortInclusionTable = cohortInclusionTable,
+        cohortInclusionResultTable = cohortInclusionResultTable,
+        cohortInclusionStatsTable = cohortInclusionStatsTable,
+        cohortSummaryStatsTable = cohortSummaryStatsTable,
+        cohortCensorStatsTable = cohortCensorStatsTable
+      ),
+      tempEmulationSchema = tempEmulationSchema,
+      outputFolder = outputFolder
+    )
   }
-  
+
   # Set doPositiveControlSynthesis to FALSE if you don't want to use synthetic positive controls:
-  doPositiveControlSynthesis = FALSE
+  doPositiveControlSynthesis <- FALSE
   if (doPositiveControlSynthesis) {
     if (synthesizePositiveControls) {
       message("Synthesizing positive controls")
-      synthesizePositiveControls(connectionDetails = connectionDetails,
-                                 cdmDatabaseSchema = cdmDatabaseSchema,
-                                 cohortDatabaseSchema = cohortDatabaseSchema,
-                                 cohortTable = cohortTable,
-                                 tempEmulationSchema = tempEmulationSchema,
-                                 outputFolder = outputFolder,
-                                 maxCores = maxCores)
+      synthesizePositiveControls(
+        connectionDetails = connectionDetails,
+        cdmDatabaseSchema = cdmDatabaseSchema,
+        cohortDatabaseSchema = cohortDatabaseSchema,
+        cohortTable = cohortTable,
+        tempEmulationSchema = tempEmulationSchema,
+        outputFolder = outputFolder,
+        maxCores = maxCores
+      )
     }
   }
-  
+
   if (runAnalyses) {
     message("Running CohortMethod analyses")
-    runCohortMethod(connectionDetails = connectionDetails,
-                    cdmDatabaseSchema = cdmDatabaseSchema,
-                    cohortDatabaseSchema = cohortDatabaseSchema,
-                    cohortTable = cohortTable,
-                    tempEmulationSchema = tempEmulationSchema,
-                    outputFolder = outputFolder,
-                    maxCores = maxCores)
+    runCohortMethod(
+      connectionDetails = connectionDetails,
+      cdmDatabaseSchema = cdmDatabaseSchema,
+      cohortDatabaseSchema = cohortDatabaseSchema,
+      cohortTable = cohortTable,
+      tempEmulationSchema = tempEmulationSchema,
+      outputFolder = outputFolder,
+      maxCores = maxCores
+    )
   }
-  
+
   if (packageResults) {
     message("Packaging results")
-    exportResults(outputFolder = outputFolder,
-                  databaseId = databaseId,
-                  databaseName = databaseName,
-                  databaseDescription = databaseDescription,
-                  connectionDetails = connectionDetails,
-                  cdmDatabaseSchema = cdmDatabaseSchema,
-                  minCellCount = minCellCount,
-                  maxCores = maxCores)
+    exportResults(
+      outputFolder = outputFolder,
+      databaseId = databaseId,
+      databaseName = databaseName,
+      databaseDescription = databaseDescription,
+      connectionDetails = connectionDetails,
+      cdmDatabaseSchema = cdmDatabaseSchema,
+      minCellCount = minCellCount,
+      maxCores = maxCores
+    )
   }
-  
+
   invisible(NULL)
 }

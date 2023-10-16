@@ -1,6 +1,6 @@
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2023 Observational Health Data Sciences and Informatics
 #
-# This file is part of JAMASodhi
+# This file is part of ReproducibilitySodhi2023
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,25 +21,28 @@ synthesizePositiveControls <- function(connectionDetails,
                                        tempEmulationSchema,
                                        outputFolder,
                                        maxCores = 1) {
-  
-  
   synthesisFolder <- file.path(outputFolder, "positiveControlSynthesis")
-  if (!file.exists(synthesisFolder))
+  if (!file.exists(synthesisFolder)) {
     dir.create(synthesisFolder)
-  
+  }
+
   synthesisSummaryFile <- file.path(outputFolder, "SynthesisSummary.csv")
   if (!file.exists(synthesisSummaryFile)) {
-    pathToCsv <- system.file("settings", "NegativeControls.csv", 
-                             package = "JAMASodhi")
+    pathToCsv <- system.file("settings", "NegativeControls.csv",
+      package = "ReproducibilitySodhi2023"
+    )
     negativeControls <- read.csv(pathToCsv)
-    exposureOutcomePairs <- data.frame(exposureId = negativeControls$targetId,
-                                       outcomeId = negativeControls$outcomeId)
+    exposureOutcomePairs <- data.frame(
+      exposureId = negativeControls$targetId,
+      outcomeId = negativeControls$outcomeId
+    )
     exposureOutcomePairs <- unique(exposureOutcomePairs)
-    pathToJson <- system.file("settings", "positiveControlSynthArgs.json", 
-                              package = "JAMASodhi")
+    pathToJson <- system.file("settings", "positiveControlSynthArgs.json",
+      package = "ReproducibilitySodhi2023"
+    )
     args <- ParallelLogger::loadSettingsFromJson(pathToJson)
     args$control$threads <- min(c(10, maxCores))
-    
+
     # Using deprecated function to conform to current JSON specs:
     result <- MethodEvaluation::injectSignals(
       connectionDetails = connectionDetails,
@@ -54,7 +57,7 @@ synthesizePositiveControls <- function(connectionDetails,
       createOutputTable = FALSE,
       exposureOutcomePairs = exposureOutcomePairs,
       workFolder = synthesisFolder,
-      modelThreads = max(1, round(maxCores/8)),
+      modelThreads = max(1, round(maxCores / 8)),
       generationThreads = min(6, maxCores),
       # External args start here
       outputIdOffset = args$outputIdOffset,
@@ -81,10 +84,11 @@ synthesizePositiveControls <- function(connectionDetails,
     result <- read.csv(synthesisSummaryFile)
   }
   ParallelLogger::logTrace("Merging positive with negative controls ")
-  pathToCsv <- system.file("settings", "NegativeControls.csv", 
-                           package = "JAMASodhi")
+  pathToCsv <- system.file("settings", "NegativeControls.csv",
+    package = "ReproducibilitySodhi2023"
+  )
   negativeControls <- read.csv(pathToCsv)
-  
+
   synthesisSummary <- read.csv(synthesisSummaryFile)
   synthesisSummary$targetId <- synthesisSummary$exposureId
   synthesisSummary <- merge(synthesisSummary, negativeControls)
@@ -92,9 +96,10 @@ synthesizePositiveControls <- function(connectionDetails,
   synthesisSummary$outcomeName <- paste0(synthesisSummary$OutcomeName, ", RR=", synthesisSummary$targetEffectSize)
   synthesisSummary$oldOutcomeId <- synthesisSummary$outcomeId
   synthesisSummary$outcomeId <- synthesisSummary$newOutcomeId
-  
-  pathToCsv <- system.file("settings", "NegativeControls.csv", 
-                           package = "JAMASodhi")
+
+  pathToCsv <- system.file("settings", "NegativeControls.csv",
+    package = "ReproducibilitySodhi2023"
+  )
   negativeControls <- read.csv(pathToCsv)
   negativeControls$targetEffectSize <- 1
   negativeControls$trueEffectSize <- 1

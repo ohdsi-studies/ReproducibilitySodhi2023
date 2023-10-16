@@ -1,4 +1,4 @@
-JAMASodhi
+ReproducibilitySodhi2023
 ==============================
 
 
@@ -19,7 +19,7 @@ How to run
 
     ```r
     install.packages("renv")
-    download.file("https://raw.githubusercontent.com/ohdsi-studies/JAMASodhi/main/renv.lock", "renv.lock")
+    download.file("https://raw.githubusercontent.com/ohdsi-studies/ReproducibilitySodhi2023/main/renv.lock", "renv.lock")
     renv::init()
     ```  
     
@@ -28,7 +28,7 @@ How to run
 3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
 
     ```r
-    library(JAMASodhi)
+    library(ReproducibilitySodhi2023)
 
     # Optional: specify where the temporary files (used by the Andromeda package) will be created:
     options(andromedaTempFolder = "s:/andromedaTemp")
@@ -40,7 +40,7 @@ How to run
     minCellCount <- 5
 	
     # The folder where the study intermediate and result files will be written:
-    outputFolder <- "c:/JAMASodhi"
+    outputFolder <- "c:/ReproducibilitySodhi2023"
 	
     # Details for connecting to the server:
     # See ?DatabaseConnector::createConnectionDetails for help
@@ -99,11 +99,11 @@ How to run
 
 License
 =======
-The JAMASodhi package is licensed under Apache License 2.0
+The ReproducibilitySodhi2023 package is licensed under Apache License 2.0
 
 Development
 ===========
-JAMASodhi was developed in ATLAS and R Studio.
+ReproducibilitySodhi2023 was developed in ATLAS and R Studio.
 
 ### Development status
 

@@ -1,6 +1,6 @@
-# Copyright 2022 Observational Health Data Sciences and Informatics
+# Copyright 2023 Observational Health Data Sciences and Informatics
 #
-# This file is part of JAMASodhi
+# This file is part of ReproducibilitySodhi2023
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,60 +20,76 @@ createCohorts <- function(connectionDetails,
                           cohortTableNames,
                           tempEmulationSchema,
                           outputFolder) {
-  if (!file.exists(outputFolder))
+  if (!file.exists(outputFolder)) {
     dir.create(outputFolder)
-  
+  }
+
   connection <- DatabaseConnector::connect(connectionDetails)
   on.exit(DatabaseConnector::disconnect(connection))
-  
-  CohortGenerator::createCohortTables(connection = connection,
-                                      cohortDatabaseSchema = cohortDatabaseSchema,
-                                      cohortTableNames = cohortTableNames)
-  cohortDefinitionSet <- CohortGenerator::getCohortDefinitionSet(packageName = "JAMASodhi",
-                                                                 settingsFileName = "Cohorts.csv",
-                                                                 cohortFileNameValue = "cohortId")
-  CohortGenerator::generateCohortSet(connection = connection,
-                                     cohortDatabaseSchema = cohortDatabaseSchema,
-                                     cohortTableNames = cohortTableNames,
-                                     cdmDatabaseSchema = cdmDatabaseSchema,
-                                     tempEmulationSchema = tempEmulationSchema,
-                                     cohortDefinitionSet = cohortDefinitionSet)
-  
+
+  CohortGenerator::createCohortTables(
+    connection = connection,
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTableNames = cohortTableNames
+  )
+  cohortDefinitionSet <- CohortGenerator::getCohortDefinitionSet(
+    packageName = "ReproducibilitySodhi2023",
+    settingsFileName = "Cohorts.csv",
+    cohortFileNameValue = "cohortId"
+  )
+  CohortGenerator::generateCohortSet(
+    connection = connection,
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTableNames = cohortTableNames,
+    cdmDatabaseSchema = cdmDatabaseSchema,
+    tempEmulationSchema = tempEmulationSchema,
+    cohortDefinitionSet = cohortDefinitionSet
+  )
+
   message("Creating negative control outcome cohorts")
-  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "JAMASodhi")
+  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "ReproducibilitySodhi2023")
   negativeControls <- read.csv(pathToCsv)
   # Currently assuming all negative controls are outcome controls
   negativeControlOutcomes <- negativeControls
   sql <- SqlRender::loadRenderTranslateSql("NegativeControlOutcomes.sql",
-                                           "JAMASodhi",
-                                           dbms = connectionDetails$dbms,
-                                           tempEmulationSchema = tempEmulationSchema,
-                                           cdm_database_schema = cdmDatabaseSchema,
-                                           target_database_schema = cohortDatabaseSchema,
-                                           target_cohort_table = cohortTableNames$cohortTable,
-                                           outcome_ids = unique(negativeControlOutcomes$outcomeId))
+    "ReproducibilitySodhi2023",
+    dbms = connectionDetails$dbms,
+    tempEmulationSchema = tempEmulationSchema,
+    cdm_database_schema = cdmDatabaseSchema,
+    target_database_schema = cohortDatabaseSchema,
+    target_cohort_table = cohortTableNames$cohortTable,
+    outcome_ids = unique(negativeControlOutcomes$outcomeId)
+  )
   DatabaseConnector::executeSql(connection, sql)
-  
+
   # Check number of subjects per cohort:
   message("Counting cohorts")
-  counts <- CohortGenerator::getCohortCounts(connection = connection,
-                                             cohortDatabaseSchema = cohortDatabaseSchema,
-                                             cohortTable = cohortTableNames$cohortTable)
-  
+  counts <- CohortGenerator::getCohortCounts(
+    connection = connection,
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTable = cohortTableNames$cohortTable
+  )
+
   counts <- addCohortNames(counts)
   write.csv(counts, file.path(outputFolder, "CohortCounts.csv"), row.names = FALSE)
 }
 
 addCohortNames <- function(data, IdColumnName = "cohortId", nameColumnName = "cohortName") {
-  pathToCsv <- system.file("Cohorts.csv", package = "JAMASodhi")
+  pathToCsv <- system.file("Cohorts.csv", package = "ReproducibilitySodhi2023")
   cohortsToCreate <- read.csv(pathToCsv)
-  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "JAMASodhi")
+  pathToCsv <- system.file("settings", "NegativeControls.csv", package = "ReproducibilitySodhi2023")
   negativeControls <- read.csv(pathToCsv)
-  
-  idToName <- data.frame(cohortId = c(cohortsToCreate$cohortId,
-                                      negativeControls$outcomeId),
-                         cohortName = c(as.character(cohortsToCreate$cohortName),
-                                        as.character(negativeControls$outcomeName)))
+
+  idToName <- data.frame(
+    cohortId = c(
+      cohortsToCreate$cohortId,
+      negativeControls$outcomeId
+    ),
+    cohortName = c(
+      as.character(cohortsToCreate$cohortName),
+      as.character(negativeControls$outcomeName)
+    )
+  )
   idToName <- idToName[order(idToName$cohortId), ]
   idToName <- idToName[!duplicated(idToName$cohortId), ]
   names(idToName)[1] <- IdColumnName
@@ -82,7 +98,7 @@ addCohortNames <- function(data, IdColumnName = "cohortId", nameColumnName = "co
   # Change order of columns:
   idCol <- which(colnames(data) == IdColumnName)
   if (idCol < ncol(data) - 1) {
-    data <- data[, c(1:idCol, ncol(data) , (idCol + 1):(ncol(data) - 1))]
+    data <- data[, c(1:idCol, ncol(data), (idCol + 1):(ncol(data) - 1))]
   }
   return(data)
 }
