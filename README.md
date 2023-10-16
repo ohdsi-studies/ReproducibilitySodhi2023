@@ -15,17 +15,17 @@ How to run
 ==========
 1. Follow [these instructions](https://ohdsi.github.io/Hades/rSetup.html) for setting up your R environment, including RTools and Java. 
 
-2. Create an empty folder or new RStudio project, and in `R`, use the following code to install the study package and its dependencies:
+2. Open your study package in RStudio. Use the following code to install all the dependencies:
 
-    ```r
-    install.packages("renv")
-    download.file("https://raw.githubusercontent.com/ohdsi-studies/ReproducibilitySodhi2023/main/renv.lock", "renv.lock")
-    renv::init()
-    ```  
-    
-    If renv mentions that the project already has a lockfile select "*1: Restore the project from the lockfile.*".
+	```r
+	install.packages("renv")
+	renv::activate()
+	renv::restore()
+	```
 
-3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
+3. In RStudio, select 'Build' then 'Install and Restart' to install the `ReproducibilitySodhi2023` package.
+
+4. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
 
     ```r
     library(ReproducibilitySodhi2023)
@@ -79,8 +79,7 @@ How to run
             packageResults = TRUE,
             maxCores = maxCores)
     ```
-
-4. Upload the file ```export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator:
+5. Upload the file ```export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator:
 
 	```r
 	uploadResults(outputFolder, privateKeyFileName = "<file>", userName = "<name>")
@@ -88,7 +87,7 @@ How to run
 	
 	Where ```<file>``` and ```<name<``` are the credentials provided to you personally by the study coordinator.
 		
-5. To view the results, use the Shiny app:
+6. To view the results, use the Shiny app:
 
 	```r
 	prepareForEvidenceExplorer("Result_<databaseId>.zip", "/shinyData")
