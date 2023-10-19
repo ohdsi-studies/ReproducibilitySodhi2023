@@ -1,6 +1,9 @@
-(Note: currently not using version numbers, so referencing release time instead)
+ReproducibilitySodhi2023 v0.0.2
+======================================
 
-ReproducibilitySodhi2023 Q1 2022
+* Exclude covariates causing correlation error Issue #7
+
+ReproducibilitySodhi2023 v0.0.1
 ======================================
 
 Changes:

@@ -1,7 +1,7 @@
 Package: ReproducibilitySodhi2023
 Type: Package
 Title: Reproduction of Sodhi Study in JAMA 2023
-Version: 0.0.1
+Version: 0.0.2
 Date: 2022-03-23
 Author: Asieh Golozar [aut, cre]
 Maintainer: Asieh Golozar <a.golozar@northeastern.edu>
