@@ -4,3 +4,4 @@
 .Ruserdata
 renv/
 .Rprofile
+errorReportSql.txt
