@@ -258,7 +258,9 @@
           21600679,
           21604820,
           21604801,
-          21604816
+          21604816,
+          21600712,
+          21600744
         ],
         "ConditionGroupEraMediumTerm": false,
         "DrugExposureMediumTerm": false,
@@ -18859,18 +18861,7 @@
           201612,
           4152165,
           201343,
-          4020456,
-          21604686,
-          21604685,
-          21604729,
-          21600681,
-          1714319,
-          21600680,
-          750982,
-          21600679,
-          21604820,
-          21604801,
-          21604816
+          4020456
         ],
         "DrugGroupEraStartShortTerm": false,
         "addDescendantsToExclude": false,
