@@ -30,29 +30,16 @@ databaseDescription <- "IBM MarketScan® Medicare Supplemental and Coordination 
 # For some database platforms (e.g. Oracle): define a schema that can be used to emulate temp tables:
 options(sqlRenderTempEmulationSchema = NULL)
 
-execute(connectionDetails = connectionDetails,
-        cdmDatabaseSchema = cdmDatabaseSchema,
-        cohortDatabaseSchema = cohortDatabaseSchema,
-        cohortTable = cohortTable,
-        outputFolder = outputFolder,
-        databaseId = databaseId,
-        databaseName = databaseName,
-        databaseDescription = databaseDescription,
-        verifyDependencies = TRUE,
-        createCohorts = TRUE,
-        synthesizePositiveControls = TRUE,
-        runAnalyses = TRUE,
-        packageResults = TRUE,
-        maxCores = maxCores)
+
+executeSodhiReplication(
+  connectionDetails = connectionDetails,
+  cdmDatabaseSchema = cdmDatabaseSchema,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortTable = cohortTable,
+  tempEmulationSchema = NULL,
+  outputFolder = outputFolder,
+  maxCores = maxCores
+)
 
 resultsZipFile <- file.path(outputFolder, "export", paste0("Results_", databaseId, ".zip"))
 dataFolder <- file.path(outputFolder, "shinyData")
-
-# You can inspect the results if you want:
-prepareForEvidenceExplorer(resultsZipFile = resultsZipFile, dataFolder = dataFolder)
-launchEvidenceExplorer(dataFolder = dataFolder, blind = TRUE, launch.browser = FALSE)
-
-# Upload the results to the OHDSI SFTP server:
-privateKeyFileName <- ""
-userName <- ""
-uploadResults(outputFolder, privateKeyFileName, userName)
